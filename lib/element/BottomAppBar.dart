@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_8/strani/korzina.dart';
 import 'package:flutter_application_8/strani/person.dart';
 import 'package:flutter_application_8/strani/poisk.dart';
 
@@ -31,7 +32,13 @@ class bottom extends StatelessWidget {
             ),
           ),
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => korzina(),
+                    ));
+              },
               icon: Icon(
                 Icons.local_grocery_store,
                 color: Colors.white,

@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_8/register/register.dart';
+import 'package:flutter_application_8/strani/korzina.dart';
 import 'package:flutter_application_8/strani/poisk.dart';
 import 'package:flutter_application_8/main.dart';
 import 'package:flutter_application_8/register/sign.dart';
@@ -22,7 +25,22 @@ class person extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: 400,
+                  height: 200,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                      labelText: 'Введите email', border: OutlineInputBorder()),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                      labelText: 'Введите пароль',
+                      border: OutlineInputBorder()),
+                ),
+                SizedBox(
+                  height: 120,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -36,7 +54,7 @@ class person extends StatelessWidget {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => sign(),
+                              builder: (context) => ListViewLesson(),
                             ));
                       },
                       child: Text('Войти'),
@@ -57,6 +75,10 @@ class person extends StatelessWidget {
                             MaterialPageRoute(
                               builder: (context) => register(),
                             ));
+                        TextButton(
+                            onPressed: () {},
+                            
+                            child: Text('Зарегистрироваться'), );
                       },
                       child: Text('Зарегистрироваться'),
                     )
@@ -96,7 +118,13 @@ class person extends StatelessWidget {
               color: Colors.white,
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => korzina(),
+                    ));
+              },
               icon: Icon(Icons.local_grocery_store),
               color: Colors.white,
             ),

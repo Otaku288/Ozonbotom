@@ -50,7 +50,7 @@ class register extends StatelessWidget {
                 children: [
                   ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
                               builder: (context) => person(),
